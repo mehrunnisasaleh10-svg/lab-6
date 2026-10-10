@@ -1,0 +1,22 @@
+
+name: Lab 10 CI
+
+on:
+  push:
+    branches:
+      - feat/lab10-ci
+  pull_request:
+
+jobs:
+  check-html:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Check HTML file exists
+        run: test -f index.html
+
+      - name: Check page heading
+        run: grep -q "Welcome to My Git and GitHub Lab" index.html

@@ -19,4 +19,4 @@ jobs:
         run: test -f index.html
 
       - name: Check page heading
-        run: grep -q "Welcome to My Python Lab" index.html
+        run: grep -q "Welcome to My Git and GitHub Lab" index.html
